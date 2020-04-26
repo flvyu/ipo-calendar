@@ -41,7 +41,7 @@ export default function SocialMediaShare() {
       alignItems="center">
       {isLargeScreen && (
         <Typography className={classes.title} color="secondary" variant="body2" gutterBottom>
-          <Share size={12} />
+          Share <Share color="primary" style={{fontSize: 14}}/>
         </Typography>
       )}
       {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton)}
