@@ -11,10 +11,10 @@ import { DATE_SEPARATION } from './constants/util_constants'
 import { useSelectDate } from './hooks'
 import { loadIpoCalendarInformation } from './services'
 
-function App() {
-  const currentDate = moment(new Date())
-  const futureDate = currentDate.add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
+const currentDate = moment(new Date('2020-01-01 00:00'))
+const futureDate = moment(currentDate).add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
 
+function App() {
   const startDate = useSelectDate(currentDate)
   const endDate = useSelectDate(futureDate)
 
