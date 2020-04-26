@@ -14,11 +14,17 @@ import {
   TwitterShareButton
 } from 'react-share'
 import { makeStyles } from '@material-ui/core/styles'
-import { PROD_SITE_URL } from '../constants/content_constants'
+import { PROD_SITE_URL, SITE_META } from '../constants/content_constants'
 
 const useStyles = makeStyles(theme => ({
   title: {
     color: theme.palette.secondary.dark
+  },
+  button: {
+    '&:focus': {
+      outline: 'none',
+      textDecoration: 'none'
+    }
   }
 }))
 
@@ -45,10 +51,28 @@ export default function SocialMediaShare() {
           Share <Share color="primary" style={{ fontSize: 14 }} />
         </Typography>
       )}
-      {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton, { url: PROD_SITE_URL })}
-      {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton, { url: PROD_SITE_URL })}
-      {withDefaultSocialIconProps(RedditIcon, RedditShareButton, { url: PROD_SITE_URL })}
-      {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton, { url: PROD_SITE_URL })}
+      {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton, {
+        className: classes.button,
+        url: SITE_META.source,
+        quote: SITE_META.title
+      })}
+      {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton, {
+        className: classes.buton,
+        url: SITE_META.source,
+        title: SITE_META.title,
+        summary: SITE_META.description,
+        source: PROD_SITE_URL
+      })}
+      {withDefaultSocialIconProps(RedditIcon, RedditShareButton, {
+        className: classes.buton,
+        url: SITE_META.source,
+        title: SITE_META.title
+      })}
+      {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton, {
+        className: classes.buton,
+        url: SITE_META.source,
+        hashtags: SITE_META.hashtags
+      })}
     </Box>
   )
 }
