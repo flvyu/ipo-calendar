@@ -44,99 +44,6 @@ const useStyles = makeStyles({
   }
 })
 
-const EXAMPLE_DATA = [
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  },
-  {
-    name: 'ZENTALIS PHARMACEUTICALS, LLC',
-    symbol: 'ZNTL',
-    price: '16.00-18.00',
-    numberOfShares: 7650000,
-    totalSharesValue: 158355000,
-    date: '2020-04-03',
-    status: 'expected',
-    exchange: 'NASDAQ Global'
-  }
-]
-
 export default function IPOCalendarTable({ data }) {
   const classes = useStyles()
 
@@ -189,20 +96,114 @@ export default function IPOCalendarTable({ data }) {
 }
 
 IPOCalendarTable.propTypes = {
+  /**
+   * Shape of data to populate the table
+   */
   data: PropTypes.arrayOf(
     PropTypes.shape({
-      name: '',
-      symbol: '',
-      price: '',
-      numberOfShares: 0,
-      totalSharesValue: 0,
-      date: '',
-      status: '',
-      exchange: ''
+      name: PropTypes.string,
+      symbol: PropTypes.string,
+      price: PropTypes.string,
+      numberOfShares: PropTypes.number,
+      totalSharesValue: PropTypes.number,
+      date: PropTypes.string,
+      status: PropTypes.string,
+      exchange: PropTypes.string
     })
   )
 }
 
 IPOCalendarTable.defaultProps = {
-  data: EXAMPLE_DATA
+  data: [
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    },
+    {
+      name: 'ZENTALIS PHARMACEUTICALS, LLC',
+      symbol: 'ZNTL',
+      price: '16.00-18.00',
+      numberOfShares: 7650000,
+      totalSharesValue: 158355000,
+      date: '2020-04-03',
+      status: 'expected',
+      exchange: 'NASDAQ Global'
+    }
+  ]
 }

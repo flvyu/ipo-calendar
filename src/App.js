@@ -62,7 +62,7 @@ function App() {
       ) : error ? (
         <p>Something went wrong</p>
       ) : (
-        <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
+        <IPOCalendarTable />
       )}
     </Layout>
   )
