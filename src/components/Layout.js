@@ -18,7 +18,9 @@ export default function Layout({ children }) {
   return (
     <MuiThemeProvider theme={DefaultThemeLight}>
       <CssBaseline />
-      <Box className={classes.main}>{children}</Box>
+      <Box className={classes.main} px={3} py={4}>
+        {children}
+      </Box>
     </MuiThemeProvider>
   )
 }
