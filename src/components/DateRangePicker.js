@@ -13,10 +13,11 @@ export default function DateRangePicker({
 }) {
   return (
     <MuiPickersUtilsProvider utils={MomentUtils}>
-      <Grid container justify="center">
-        <Box m={1}>
+      <Grid container justify="center" spacing={3}>
+        <Grid item xs={12} sm={4}>
           <KeyboardDatePicker
             autoOk
+            fullWidth
             format={DEFAULT_DATE_FORMAT}
             variant="inline"
             margin="normal"
@@ -28,10 +29,11 @@ export default function DateRangePicker({
               'aria-label': 'Select the start date'
             }}
           />
-        </Box>
-        <Box m={1}>
+        </Grid>
+        <Grid item xs={12} sm={4}>
           <KeyboardDatePicker
             autoOk
+            fullWidth
             format={DEFAULT_DATE_FORMAT}
             variant="inline"
             margin="normal"
@@ -43,7 +45,7 @@ export default function DateRangePicker({
               'aria-label': 'Select the end date'
             }}
           />
-        </Box>
+        </Grid>
       </Grid>
     </MuiPickersUtilsProvider>
   )

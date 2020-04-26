@@ -14,7 +14,7 @@ const EXAMPLE_DATA = {
   totalSharesValue: 158355000
 }
 export default function IPOTable({ data }) {
-  const isLargeScreen = useMediaQuery(theme => theme.breakpoints.up('lg'))
+  const isLargeScreen = useMediaQuery(theme => theme.breakpoints.up('sm'))
   return (
     <Box display="flex" justifyContent="center">
       {data.length === 0 ? (

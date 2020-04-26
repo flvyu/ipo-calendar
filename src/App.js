@@ -48,7 +48,7 @@ function App() {
         }
         description={SITE_DESCRIPTION}
       />
-      <Typography align="center">Select the start and end date to filter the IPO data</Typography>
+      <Typography variant="body2" align="center">Select the start and end date to filter the IPO data</Typography>
       <DateRangePicker
         startDate={startDate.date}
         endDate={endDate.date}

@@ -11,6 +11,6 @@ export function useSelectDate(defaultDate = new Date(), format = DEFAULT_DATE_FO
   return {
     date: selectedDate,
     onDateChange: handleDateChange,
-    formattedDate: selectedDate.format(format)
+    formattedDate: selectedDate ? selectedDate.format(format) : ''
   }
 }

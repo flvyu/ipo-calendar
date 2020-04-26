@@ -29,11 +29,11 @@ export default function Banner({ title, description }) {
       alignItems="center"
       className={classes.root}>
       <Box mb={2}>
-        <Typography className={classes.title} variant="h4" component="h1">
+        <Typography align="center" className={classes.title} variant="h4" component="h1">
           {title}
         </Typography>
       </Box>
-      <Typography className={classes.description} component="h2">
+      <Typography align="center" className={classes.description} component="h2">
         {description}
       </Typography>
     </Box>
