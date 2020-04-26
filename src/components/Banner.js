@@ -22,7 +22,7 @@ export default function Banner({ title, description }) {
     <Box
       p={2}
       mb={4}
-      height={200}
+      height={160}
       display="flex"
       flexDirection="column"
       justifyContent="center"
