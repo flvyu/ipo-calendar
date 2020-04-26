@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import Banner from './components/Banner'
 import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
-import IPOTable from './components/IPOTable'
+import IPOCalendarTable from './components/IPOTable/IPOCalendarTable'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
@@ -48,7 +48,9 @@ function App() {
         }
         description={SITE_DESCRIPTION}
       />
-      <Typography variant="body2" align="center">Select the start and end date to filter the IPO data</Typography>
+      <Typography variant="body2" align="center">
+        Select the start and end date to filter the IPO data
+      </Typography>
       <DateRangePicker
         startDate={startDate.date}
         endDate={endDate.date}
@@ -60,7 +62,7 @@ function App() {
       ) : error ? (
         <p>Something went wrong</p>
       ) : (
-        <IPOTable data={ipoCalendarInformation.ipoCalendar} />
+        <IPOCalendarTable />
       )}
     </Layout>
   )
