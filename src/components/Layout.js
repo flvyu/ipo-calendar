@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import StickyFooter from './Footer'
 import { makeStyles } from '@material-ui/core/styles'
 import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import { MuiThemeProvider, CssBaseline, Box, Grid } from '@material-ui/core'
@@ -33,6 +34,7 @@ export default function Layout({ children, sidebar }) {
           </Grid>
         )}
       </Grid>
+      <StickyFooter/>
     </MuiThemeProvider>
   )
 }
