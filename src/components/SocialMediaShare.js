@@ -57,19 +57,19 @@ export default function SocialMediaShare() {
         quote: SITE_META.title
       })}
       {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton, {
-        className: classes.buton,
+        className: classes.button,
         url: SITE_META.source,
         title: SITE_META.title,
         summary: SITE_META.description,
         source: PROD_SITE_URL
       })}
       {withDefaultSocialIconProps(RedditIcon, RedditShareButton, {
-        className: classes.buton,
+        className: classes.button,
         url: SITE_META.source,
         title: SITE_META.title
       })}
       {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton, {
-        className: classes.buton,
+        className: classes.button,
         url: SITE_META.source,
         hashtags: SITE_META.hashtags
       })}
