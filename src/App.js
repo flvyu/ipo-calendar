@@ -18,7 +18,7 @@ function App() {
   const endDate = useSelectDate(futureDate)
 
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const [ipoCalendarInformation, setIpoCalendarInformation] = useState({
     ipoCalendar: []
   })
@@ -54,7 +54,7 @@ function App() {
         }
         description={SITE_DESCRIPTION}
       />
-      <Typography align="center">Select the start and end date to filter</Typography>
+      <Typography align="center">Select the start and end date to filter the IPO data</Typography>
       <DateRangePicker
         startDate={startDate.date}
         endDate={endDate.date}
