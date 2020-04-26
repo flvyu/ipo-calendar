@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     borderBottom: `2px solid ${theme.palette.primary.light}`
   },
   title: {
-    color: theme.palette.primary.dark,
+    color: theme.palette.primary.main,
     fontWeight: theme.typography.fontWeightBold
   },
   description: {
