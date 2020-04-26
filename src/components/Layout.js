@@ -5,12 +5,17 @@ import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import { MuiThemeProvider, CssBaseline, Box, Grid } from '@material-ui/core'
 import { DefaultThemeLight } from '../theme/theme'
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   main: {
     margin: '0 auto',
     maxWidth: MAX_SCREEN_WIDTH
+  },
+  sidebarFixed: {
+    [theme.breakpoints.up('md')]: {
+      position: 'fixed'
+    }
   }
-})
+}))
 
 export default function Layout({ children, sidebar }) {
   const classes = useStyles()
@@ -24,7 +29,7 @@ export default function Layout({ children, sidebar }) {
         </Grid>
         {sidebar && (
           <Grid item xs={12} sm={12} md={1}>
-            {sidebar}
+            <Box className={classes.sidebarFixed}>{sidebar}</Box>
           </Grid>
         )}
       </Grid>
