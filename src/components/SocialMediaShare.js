@@ -14,6 +14,7 @@ import {
   TwitterShareButton
 } from 'react-share'
 import { makeStyles } from '@material-ui/core/styles'
+import { PROD_SITE_URL } from '../constants/content_constants'
 
 const useStyles = makeStyles(theme => ({
   title: {
@@ -44,10 +45,10 @@ export default function SocialMediaShare() {
           Share <Share color="primary" style={{ fontSize: 14 }} />
         </Typography>
       )}
-      {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton)}
-      {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton)}
-      {withDefaultSocialIconProps(RedditIcon, RedditShareButton)}
-      {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton)}
+      {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton, { url: PROD_SITE_URL })}
+      {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton, { url: PROD_SITE_URL })}
+      {withDefaultSocialIconProps(RedditIcon, RedditShareButton, { url: PROD_SITE_URL })}
+      {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton, { url: PROD_SITE_URL })}
     </Box>
   )
 }
