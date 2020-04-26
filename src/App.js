@@ -1,7 +1,7 @@
 import { Typography } from '@material-ui/core'
 import { DateRange as Calendar } from '@material-ui/icons'
 import moment from 'moment'
-import React, { useState, Fragment } from 'react'
+import React, { Fragment, useState, useEffect } from 'react'
 import Banner from './components/Banner'
 import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
@@ -9,6 +9,7 @@ import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
 import { useSelectDate } from './hooks'
+import { loadIpoCalendarInformation } from './services'
 
 function App() {
   const currentDate = moment(new Date())
@@ -61,7 +62,13 @@ function App() {
         handleStartDateChange={startDate.onDateChange}
         handleEndDateChange={endDate.onDateChange}
       />
-      {loading ? <BoxedProgress boxProps={{ mt: 2 }} /> : <IpoList />}
+      {loading ? (
+        <BoxedProgress boxProps={{ mt: 2 }} />
+      ) : error ? (
+        <p>Something went wrong</p>
+      ) : (
+        <IpoList />
+      )}
     </Layout>
   )
 }
