@@ -1,10 +1,11 @@
 import { Typography } from '@material-ui/core'
 import { DateRange as Calendar } from '@material-ui/icons'
 import moment from 'moment'
-import React, { Fragment, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import Banner from './components/Banner'
 import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
+import IPOTable from './components/IPOTable'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
@@ -37,14 +38,6 @@ function App() {
   //     })
   // }, [startDate.formattedDate, endDate.formattedDate])
 
-  const IpoList = () => (
-    <Fragment>
-      {ipoCalendarInformation.ipoCalendar.map(ipo => (
-        <p key={ipo.name}>{ipo.name}</p>
-      ))}
-    </Fragment>
-  )
-
   return (
     <Layout>
       <Banner
@@ -67,7 +60,7 @@ function App() {
       ) : error ? (
         <p>Something went wrong</p>
       ) : (
-        <IpoList />
+        <IPOTable data={ipoCalendarInformation.ipoCalendar} />
       )}
     </Layout>
   )
