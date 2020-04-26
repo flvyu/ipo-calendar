@@ -15,7 +15,7 @@ export function BoxedProgress({ size, boxProps, ...rest }) {
 
   return (
     <Box display="flex" justifyContent="center" {...boxProps}>
-      <CircularProgress size={size} className={classes.progress} thickness={2} {...rest}/>
+      <CircularProgress size={size} className={classes.progress} thickness={2} {...rest} />
     </Box>
   )
 }
@@ -29,7 +29,7 @@ BoxedProgress.propTypes = {
   /**
    * Any props for the box root component
    */
-  boxProps: PropTypes.object,
+  boxProps: PropTypes.object
 }
 
 BoxedProgress.defaultProps = {
