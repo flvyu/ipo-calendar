@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Layout from './components/Layout'
 import Banner from './components/Banner'
+import DateRangePicker from './components/DateRangePicker'
 import { DateRange as Calendar } from '@material-ui/icons'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { loadIpoCalendarInformation } from './services'
@@ -30,6 +31,7 @@ function App() {
         }
         description={SITE_DESCRIPTION}
       />
+      <DateRangePicker/>
       {ipoCalendarInformation.ipoCalendar.map(ipo => (
         <p key={ipo.name}>{ipo.name}</p>
       ))}
