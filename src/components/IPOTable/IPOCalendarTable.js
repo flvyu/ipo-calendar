@@ -10,6 +10,8 @@ import {
   TableBody,
   Table
 } from '@material-ui/core'
+import { AttachMoney } from '@material-ui/icons'
+import { formatPrice, formatDate } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
 
 const StyledTableCell = withStyles(theme => ({
@@ -36,8 +38,7 @@ const useStyles = makeStyles({
     width: '100%'
   },
   table: {
-    // minWidth: 700,
-    width: 1280,
+    minWidth: 1200,
     overflowX: 'scroll'
   }
 })
@@ -70,8 +71,8 @@ export default function IPOCalendarTable({ data }) {
                   {row.name}
                 </StyledTableCell>
                 <StyledTableCell align="center">{row.symbol}</StyledTableCell>
-                <StyledTableCell align="center">{row.price}</StyledTableCell>
-                <StyledTableCell align="center">{row.date}</StyledTableCell>
+                <StyledTableCell align="center">{formatPrice(row.price)}</StyledTableCell>
+                <StyledTableCell align="center">{formatDate(row.date)}</StyledTableCell>
                 <StyledTableCell align="center">{row.numberOfShares}</StyledTableCell>
                 <StyledTableCell align="center">{row.totalSharesValue}</StyledTableCell>
                 <StyledTableCell align="center">{row.status}</StyledTableCell>

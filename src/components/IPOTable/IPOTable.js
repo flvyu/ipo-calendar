@@ -99,7 +99,7 @@ const EXAMPLE_DATA = [
 
 export default function IPOTable({ data }) {
   return (
-    <Box display="flex" justifyContent="center">
+    <Box display="flex" justifyContent="center" mt={4}>
       <IPOCalendarTable data={EXAMPLE_DATA} />
     </Box>
   )
