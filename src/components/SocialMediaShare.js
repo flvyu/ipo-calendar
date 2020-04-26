@@ -35,13 +35,13 @@ export default function SocialMediaShare() {
 
   return (
     <Box
+      mt={4}
       display="flex"
       flexDirection={isLargeScreen ? 'column' : 'row'}
-      justifyContent="center"
-      alignItems="center">
+      justifyContent="center">
       {isLargeScreen && (
         <Typography className={classes.title} color="secondary" variant="body2" gutterBottom>
-          Share <Share color="primary" style={{fontSize: 14}}/>
+          Share <Share color="primary" style={{ fontSize: 14 }} />
         </Typography>
       )}
       {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton)}
