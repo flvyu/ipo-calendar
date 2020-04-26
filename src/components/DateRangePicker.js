@@ -1,7 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Grid from '@material-ui/core/Grid'
 import MomentUtils from '@date-io/moment'
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers'
+import { DEFAULT_DATE_FORMAT } from '../constants/util_constants'
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker
+} from '@material-ui/pickers'
 
 export default function DateRangePicker({
   startDate,
@@ -14,8 +19,8 @@ export default function DateRangePicker({
       <Grid container justify="space-around">
         <KeyboardDatePicker
           disableToolbar
+          format={DEFAULT_DATE_FORMAT}
           variant="inline"
-          format="yyyy/mm/dd"
           margin="normal"
           id="date-picker-inline-from"
           label="Start date"
@@ -27,8 +32,8 @@ export default function DateRangePicker({
         />
         <KeyboardDatePicker
           disableToolbar
+          format={DEFAULT_DATE_FORMAT}
           variant="inline"
-          format="yyyy/mm/dd"
           margin="normal"
           id="date-picker-inline-to"
           label="End date"
@@ -41,4 +46,26 @@ export default function DateRangePicker({
       </Grid>
     </MuiPickersUtilsProvider>
   )
+}
+
+DateRangePicker.propTypes = {
+  /**
+   * Start date of the date range
+   */
+  startDate: PropTypes.object.isRequired,
+
+  /**
+   * End date of the date range
+   */
+  endDate: PropTypes.object.isRequired,
+
+  /**
+   * A function to update the start date
+   */
+  handleStartDateChange: PropTypes.func.isRequired,
+
+  /**
+   * A function to update the end date
+   */
+  handleEndDateChange: PropTypes.func.isRequired
 }

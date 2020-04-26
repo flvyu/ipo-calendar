@@ -27,8 +27,7 @@ export default function Banner({ title, description }) {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      className={classes.root}
-    >
+      className={classes.root}>
       <Box mb={2}>
         <Typography className={classes.title} variant="h4">
           {title}
