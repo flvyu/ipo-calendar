@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react'
 import Banner from './components/Banner'
 import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
-import IPOTable from './components/IPOTable/IPOTable'
+import IPOCalendarTable from './components/IPOTable/IPOCalendarTable'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
@@ -62,7 +62,7 @@ function App() {
       ) : error ? (
         <p>Something went wrong</p>
       ) : (
-        <IPOTable data={ipoCalendarInformation.ipoCalendar} />
+        <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
       )}
     </Layout>
   )
