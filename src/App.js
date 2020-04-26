@@ -10,15 +10,15 @@ function App() {
     ipoCalendar: []
   })
 
-  useEffect(() => {
-    loadIpoCalendarInformation({ from: '2020-01-01', to: '2021-01-01' })
-      .then(response => {
-        setIpoCalendarInformation(response)
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }, [])
+  // useEffect(() => {
+  //   loadIpoCalendarInformation({ from: '2020-01-01', to: '2021-01-01' })
+  //     .then(response => {
+  //       setIpoCalendarInformation(response)
+  //     })
+  //     .catch(error => {
+  //       console.log(error)
+  //     })
+  // }, [])
 
   return (
     <Layout>

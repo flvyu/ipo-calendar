@@ -4,6 +4,9 @@ import { Box, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
+  root: {
+    borderBottom: `2px solid ${theme.palette.primary.light}`
+  },
   title: {
     color: theme.palette.primary.dark,
     fontWeight: theme.typography.fontWeightBold
@@ -19,11 +22,13 @@ export default function Banner({ title, description }) {
     <Box
       p={2}
       mb={4}
-      height={300}
+      height={200}
       display="flex"
       flexDirection="column"
       justifyContent="center"
-      alignItems="center">
+      alignItems="center"
+      className={classes.root}
+    >
       <Box mb={2}>
         <Typography className={classes.title} variant="h4">
           {title}
