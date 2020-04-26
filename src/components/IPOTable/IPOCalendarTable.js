@@ -18,7 +18,7 @@ import DataNotAvailable from './DataNotAvailable'
 const StyledTableCell = withStyles(theme => ({
   head: {
     backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white
+    color: theme.palette.primary.light
   },
   body: {
     fontSize: 14,
