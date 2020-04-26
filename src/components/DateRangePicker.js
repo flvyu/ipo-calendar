@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import MomentUtils from '@date-io/moment'
 import { DEFAULT_DATE_FORMAT } from '../constants/util_constants'
 import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers'
