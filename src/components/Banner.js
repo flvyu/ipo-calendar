@@ -51,5 +51,6 @@ Banner.propTypes = {
 }
 
 Banner.defaultProps = {
+  title: 'Ipo Calendar',
   description: ''
 }

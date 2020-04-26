@@ -29,5 +29,5 @@ Layout.propTypes = {
   /**
    * Anything that can be rendered, which is passed to this component.
    */
-  children: PropTypes.node
+  children: PropTypes.node.isRequired
 }
