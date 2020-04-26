@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { withStyles, makeStyles } from '@material-ui/core/styles'
 import {
+  Chip,
   Paper,
   TableRow,
   TableHead,
@@ -10,7 +11,6 @@ import {
   TableBody,
   Table
 } from '@material-ui/core'
-import { AttachMoney } from '@material-ui/icons'
 import { formatPrice, formatDate } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
 
@@ -70,11 +70,15 @@ export default function IPOCalendarTable({ data }) {
                 <StyledTableCell component="th" scope="row">
                   {row.name}
                 </StyledTableCell>
-                <StyledTableCell align="center">{row.symbol}</StyledTableCell>
+                <StyledTableCell align="center">
+                  <Chip label={row.symbol} />
+                </StyledTableCell>
                 <StyledTableCell align="center">{formatPrice(row.price)}</StyledTableCell>
                 <StyledTableCell align="center">{formatDate(row.date)}</StyledTableCell>
-                <StyledTableCell align="center">{row.numberOfShares}</StyledTableCell>
-                <StyledTableCell align="center">{row.totalSharesValue}</StyledTableCell>
+                <StyledTableCell align="center">{row.numberOfShares.toLocaleString()}</StyledTableCell>
+                <StyledTableCell align="center">
+                  {formatPrice(row.totalSharesValue.toLocaleString())}
+                </StyledTableCell>
                 <StyledTableCell align="center">{row.status}</StyledTableCell>
                 <StyledTableCell align="center">{row.exchange}</StyledTableCell>
               </StyledTableRow>
@@ -102,5 +106,16 @@ IPOCalendarTable.propTypes = {
 }
 
 IPOCalendarTable.propTypes = {
-  data: []
+  data: [
+    {
+      name: '',
+      symbol: '',
+      price: '',
+      numberOfShares: 0,
+      totalSharesValue: 0,
+      date: '',
+      status: '',
+      exchange: ''
+    }
+  ]
 }
