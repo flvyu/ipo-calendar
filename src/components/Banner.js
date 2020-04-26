@@ -15,7 +15,7 @@ Banner.propTypes = {
   /**
    * Title of the banner
    */
-  title: PropTypes.string.isRequired,
+  title: PropTypes.node,
 
   /**
    * Description for the banner
