@@ -41,5 +41,5 @@ Layout.propTypes = {
   /**
    * Content to show on the sidebar
    */
-  sideBar: PropTypes.node
+  sidebar: PropTypes.node
 }

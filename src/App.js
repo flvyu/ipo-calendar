@@ -6,6 +6,7 @@ import Banner from './components/Banner'
 import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
 import IPOCalendarTable from './components/IPOTable/IPOCalendarTable'
+import SocialMediaShare from './components/SocialMediaShare'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
@@ -39,7 +40,7 @@ function App() {
   // }, [startDate.formattedDate, endDate.formattedDate])
 
   return (
-    <Layout>
+    <Layout sidebar={<SocialMediaShare />}>
       <Banner
         title={
           <>
