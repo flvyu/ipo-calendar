@@ -13,6 +13,8 @@ import {
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { EMPTY_STRING } from '../../constants/util_constants'
+import { MAX_SCREEN_WIDTH} from '../../constants/ui_contants'
 import { formatDate, formatPrice } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
 
@@ -21,7 +23,7 @@ const DEFAULT_ROWS_PER_PAGE = 25
 const StyledTableCell = withStyles(theme => ({
   head: {
     backgroundColor: theme.palette.common.black,
-    color: theme.palette.primary.light
+    color: theme.palette.primary.light,
   },
   body: {
     fontSize: 14,
@@ -38,14 +40,12 @@ const StyledTableRow = withStyles(theme => ({
 }))(TableRow)
 
 const useStyles = makeStyles({
-  root: {
+  container: {
+    maxHeight: 500,
     width: '100%'
   },
-  container: {
-    maxHeight: 500
-  },
   table: {
-    minWidth: 1200,
+    minWidth: 900,
     overflowX: 'scroll'
   }
 })
@@ -70,7 +70,7 @@ export default function IPOCalendarTable({ data }) {
       {data.length === 0 ? (
         <DataNotAvailable />
       ) : (
-        <Paper className={classes.root}>
+        <Paper>
           <TableContainer className={classes.container}>
             <Table stickyHeader className={classes.table} aria-label="IPO information table">
               <TableHead>
@@ -86,26 +86,41 @@ export default function IPOCalendarTable({ data }) {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
-                  <StyledTableRow key={`${row.name}-${row.symbol}`}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      <Chip label={row.symbol} />
-                    </StyledTableCell>
-                    <StyledTableCell align="center">{formatPrice(row.price)}</StyledTableCell>
-                    <StyledTableCell align="center">{formatDate(row.date)}</StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.numberOfShares.toLocaleString()}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {formatPrice(row.totalSharesValue.toLocaleString())}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">{row.status}</StyledTableCell>
-                    <StyledTableCell align="center">{row.exchange}</StyledTableCell>
-                  </StyledTableRow>
-                ))}
+                {data
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map(
+                    ({
+                      name,
+                      symbol,
+                      price,
+                      date: ipoDate,
+                      numberOfShares,
+                      totalSharesValue,
+                      status,
+                      exchange
+                    }) => (
+                      <StyledTableRow key={`${name}-${symbol}`}>
+                        <StyledTableCell component="th" scope="row">
+                          {name}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">
+                          {symbol ? <Chip label={symbol} /> : null}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">{formatPrice(price)}</StyledTableCell>
+                        <StyledTableCell align="center">{formatDate(ipoDate)}</StyledTableCell>
+                        <StyledTableCell align="center">
+                          {numberOfShares ? numberOfShares.toLocaleString() : EMPTY_STRING}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">
+                          {totalSharesValue
+                            ? formatPrice(totalSharesValue.toLocaleString())
+                            : EMPTY_STRING}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">{status}</StyledTableCell>
+                        <StyledTableCell align="center">{exchange}</StyledTableCell>
+                      </StyledTableRow>
+                    )
+                  )}
               </TableBody>
             </Table>
           </TableContainer>
