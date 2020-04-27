@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
   },
   sidebarFixed: {
     [theme.breakpoints.up('md')]: {
-      position: 'fixed'
+      position: 'fixed',
+      marginLeft: theme.spacing(3)
     }
   }
 }))
@@ -31,7 +32,7 @@ export default function Layout({ children, sidebar }) {
       <CssBaseline />
       <div className={classes.root}>
         <Grid className={classes.main} container component={Box} px={3} py={1}>
-          <Grid item xs={12} sm={12} md={!sidebar ? 12 : 10}>
+          <Grid item xs={12} sm={12} md={!sidebar ? 12 : 11}>
             {children}
           </Grid>
           {sidebar && (

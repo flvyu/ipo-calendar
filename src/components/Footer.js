@@ -20,7 +20,7 @@ const textStyles = makeStyles({
 const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
-    margin: '60px auto',
+    marginTop: 60,
     display: 'flex',
     flexDirection: 'column',
     height: 200,
