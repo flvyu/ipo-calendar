@@ -45,14 +45,13 @@ const StyledTableRow = withStyles(theme => ({
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: MAX_SCREEN_WIDTH
+    width: '100%'
   },
   container: {
-    width: 'auto',
-    maxHeight: 440
+    maxHeight: 500
   },
   table: {
-    minWidth: 900,
+    minWidth: 1200,
     overflowX: 'scroll'
   }
 })
