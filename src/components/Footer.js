@@ -9,8 +9,9 @@
 
 import React from 'react'
 import grey from '@material-ui/core/colors/grey'
-import { Link, Box, Typography } from '@material-ui/core'
+import { Box, Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 
 const textStyles = makeStyles({
   textColor: '#fff'
@@ -19,6 +20,9 @@ const textStyles = makeStyles({
 const useStyles = makeStyles(theme => ({
   footerSectionTitle: {
     fontWeight: 'bold'
+  },
+  madeBy: {
+    fontWeight: theme.typography.fontWeightBold
   },
   root: {
     display: 'flex',
@@ -46,9 +50,6 @@ function Copyright() {
   return (
     <Typography variant="body2" className={classes.textColor}>
       {`Copyright © ${new Date().getFullYear()}`}
-      <Link href="http://flavioander.com/" underline="none">
-        {' '}Flavio Andrade
-      </Link>
     </Typography>
   )
 }
@@ -58,9 +59,27 @@ export default function StickyFooter() {
 
   return (
     <div className={classes.root}>
-      <Box mt={2}>
-        <Box display="flex" flexWrap="wrap" justifyContent="flex-start" className={classes.main}>
-          <p>Hello World</p>
+      <Box mt={2} display="flex" justifyContent="center">
+        <Box
+          mt={4}
+          width="80%"
+          maxWidth={MAX_SCREEN_WIDTH}
+          display="flex"
+          justifyContent="center"
+          flexDirection="column">
+          <Typography className={classes.madeBy} align="center">
+            Made by{' '}
+            <Link href="https://twitter.com/1PIRSQRD" underline="none">
+              {' '}
+              Flavio Andrade
+            </Link>
+          </Typography>
+          <Typography paragraph align="center">
+            Hi there 👋🏾, If you would like to support the site, you can do so through my{' '}
+            <Link href="https://paypal.me/1PIRSQRD?locale.x=en_US" underline="none">
+              PayPal
+            </Link>
+          </Typography>
         </Box>
       </Box>
       <footer className={classes.footer}>

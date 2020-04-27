@@ -34,7 +34,7 @@ export default function Layout({ children, sidebar }) {
           </Grid>
         )}
       </Grid>
-      <StickyFooter/>
+      <StickyFooter />
     </MuiThemeProvider>
   )
 }
