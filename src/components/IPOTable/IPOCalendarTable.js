@@ -7,21 +7,26 @@ import {
   TableCell,
   TableContainer,
   TableHead,
-  TableRow,
-  TablePagination
+  TablePagination,
+  TableRow
 } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { EMPTY_STRING } from '../../constants/util_constants'
 import { formatDate, formatPrice } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
 
 const DEFAULT_ROWS_PER_PAGE = 25
 
 const StyledTableCell = withStyles(theme => ({
+  root: {
+    width: 200
+  },
   head: {
     backgroundColor: theme.palette.common.black,
-    color: theme.palette.primary.light
+    color: theme.palette.primary.light,
+    width: 200
   },
   body: {
     fontSize: 14,
@@ -77,7 +82,7 @@ export default function IPOCalendarTable({ data }) {
                 <TableRow>
                   <StyledTableCell>Company</StyledTableCell>
                   <StyledTableCell align="center">Symbol</StyledTableCell>
-                  <StyledTableCell align="center">Price</StyledTableCell>
+                  <StyledTableCell align="center">Expected Price</StyledTableCell>
                   <StyledTableCell align="center">Expected Date</StyledTableCell>
                   <StyledTableCell align="center">Shares</StyledTableCell>
                   <StyledTableCell align="center">Volume</StyledTableCell>
@@ -86,26 +91,41 @@ export default function IPOCalendarTable({ data }) {
                 </TableRow>
               </TableHead>
               <TableBody>
-                {data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map(row => (
-                  <StyledTableRow key={`${row.name}-${row.symbol}`}>
-                    <StyledTableCell component="th" scope="row">
-                      {row.name}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      <Chip label={row.symbol} />
-                    </StyledTableCell>
-                    <StyledTableCell align="center">{formatPrice(row.price)}</StyledTableCell>
-                    <StyledTableCell align="center">{formatDate(row.date)}</StyledTableCell>
-                    <StyledTableCell align="center">
-                      {row.numberOfShares.toLocaleString()}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">
-                      {formatPrice(row.totalSharesValue.toLocaleString())}
-                    </StyledTableCell>
-                    <StyledTableCell align="center">{row.status}</StyledTableCell>
-                    <StyledTableCell align="center">{row.exchange}</StyledTableCell>
-                  </StyledTableRow>
-                ))}
+                {data
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map(
+                    ({
+                      name,
+                      symbol,
+                      price,
+                      date: ipoDate,
+                      numberOfShares,
+                      totalSharesValue,
+                      status,
+                      exchange
+                    }) => (
+                      <StyledTableRow key={`${name}-${symbol}`}>
+                        <StyledTableCell component="th" scope="row">
+                          {name}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">
+                          {symbol ? <Chip label={symbol} /> : null}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">{formatPrice(price)}</StyledTableCell>
+                        <StyledTableCell align="center">{formatDate(ipoDate)}</StyledTableCell>
+                        <StyledTableCell align="center">
+                          {numberOfShares ? numberOfShares.toLocaleString() : EMPTY_STRING}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">
+                          {totalSharesValue
+                            ? formatPrice(totalSharesValue.toLocaleString())
+                            : EMPTY_STRING}
+                        </StyledTableCell>
+                        <StyledTableCell align="center">{status}</StyledTableCell>
+                        <StyledTableCell align="center">{exchange}</StyledTableCell>
+                      </StyledTableRow>
+                    )
+                  )}
               </TableBody>
             </Table>
           </TableContainer>

@@ -18,22 +18,15 @@ const textStyles = makeStyles({
 })
 
 const useStyles = makeStyles(theme => ({
-  footerSectionTitle: {
-    fontWeight: 'bold'
-  },
-  madeBy: {
-    fontWeight: theme.typography.fontWeightBold
-  },
   root: {
     display: 'flex',
     flexDirection: 'column',
+    marginTop: 60,
     height: 200,
     backgroundColor: grey[100]
   },
-  link: {
-    '&:hover': {
-      textDecoration: 'none'
-    }
+  madeBy: {
+    fontWeight: theme.typography.fontWeightBold
   },
   footer: {
     textAlign: 'center',

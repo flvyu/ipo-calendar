@@ -28,7 +28,7 @@ export const DefaultThemeLight = createMuiTheme({
       light: PRIMARY_LIGHT,
       main: PRIMARY,
       dark: PRIMARY_DARK,
-      contrastText: WHITE
+      contrastText: BLACK
     },
     secondary: {
       light: SECONDARY_LIGHT,

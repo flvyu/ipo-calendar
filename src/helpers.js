@@ -1,6 +1,10 @@
 import moment from 'moment'
+import { EMPTY_STRING } from './constants/util_constants'
 
 export function formatPrice(price) {
+  if (!price) {
+    return EMPTY_STRING
+  }
   const prices = price.split('-')
   if (prices.length > 1) {
     return `$${prices[0]} - $${prices[1]}`
@@ -8,10 +12,13 @@ export function formatPrice(price) {
   if (prices.length > 0) {
     return `$${prices[0]}`
   }
-  return ''
+  return EMPTY_STRING
 }
 
 export function formatDate(dateString) {
-  const dateObj = moment(new Date(`${dateString} 00:00`));
+  if (!dateString) {
+    return EMPTY_STRING
+  }
+  const dateObj = moment(new Date(`${dateString} 00:00`))
   return dateObj.format('LL')
 }

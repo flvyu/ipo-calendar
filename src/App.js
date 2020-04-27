@@ -26,18 +26,18 @@ function App() {
     ipoCalendar: []
   })
 
-  // useEffect(() => {
-  //   setLoading(true)
-  //   loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
-  //     .then(response => {
-  //       setIpoCalendarInformation(response)
-  //       setLoading(false)
-  //     })
-  //     .catch(error => {
-  //       setError(error)
-  //       setLoading(false)
-  //     })
-  // }, [startDate.formattedDate, endDate.formattedDate])
+  useEffect(() => {
+    setLoading(true)
+    loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
+      .then(response => {
+        setIpoCalendarInformation(response)
+        setLoading(false)
+      })
+      .catch(error => {
+        setError(error)
+        setLoading(false)
+      })
+  }, [startDate.formattedDate, endDate.formattedDate])
 
   return (
     <Layout sidebar={<SocialMediaShare />}>
@@ -58,13 +58,15 @@ function App() {
         handleStartDateChange={startDate.onDateChange}
         handleEndDateChange={endDate.onDateChange}
       />
-      {loading ? (
-        <BoxedProgress boxProps={{ mt: 2 }} />
-      ) : error ? (
-        <p>Something went wrong</p>
-      ) : (
-        <IPOCalendarTable />
-      )}
+      <div style={{ minHeight: 500 }}>
+        {loading ? (
+          <BoxedProgress boxProps={{ mt: 2 }} />
+        ) : error ? (
+          <p>Something went wrong</p>
+        ) : (
+          <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
+        )}
+      </div>
     </Layout>
   )
 }
