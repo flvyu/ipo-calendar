@@ -58,13 +58,15 @@ function App() {
         handleStartDateChange={startDate.onDateChange}
         handleEndDateChange={endDate.onDateChange}
       />
-      {loading ? (
-        <BoxedProgress boxProps={{ mt: 2 }} />
-      ) : error ? (
-        <p>Something went wrong</p>
-      ) : (
-        <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
-      )}
+      <div style={{ minHeight: 500 }}>
+        {loading ? (
+          <BoxedProgress boxProps={{ mt: 2 }} />
+        ) : error ? (
+          <p>Something went wrong</p>
+        ) : (
+          <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
+        )}
+      </div>
     </Layout>
   )
 }
