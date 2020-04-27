@@ -7,14 +7,19 @@ import { MuiThemeProvider, CssBaseline, Box, Grid } from '@material-ui/core'
 import { DefaultThemeLight } from '../theme/theme'
 
 const useStyles = makeStyles(theme => ({
-  root: {},
+  root: {
+    width: '100%',
+    margin: 0,
+    padding: 0
+  },
   main: {
     margin: '0 auto',
     maxWidth: MAX_SCREEN_WIDTH
   },
   sidebarFixed: {
     [theme.breakpoints.up('md')]: {
-      position: 'fixed'
+      position: 'fixed',
+      marginLeft: theme.spacing(3)
     }
   }
 }))
@@ -26,7 +31,7 @@ export default function Layout({ children, sidebar }) {
     <MuiThemeProvider theme={DefaultThemeLight}>
       <CssBaseline />
       <div className={classes.root}>
-        <Grid className={classes.main} container component={Box} px={3} py={1} spacing={3}>
+        <Grid className={classes.main} container component={Box} px={3} py={1}>
           <Grid item xs={12} sm={12} md={!sidebar ? 12 : 11}>
             {children}
           </Grid>
@@ -36,8 +41,8 @@ export default function Layout({ children, sidebar }) {
             </Grid>
           )}
         </Grid>
+        <StickyFooter />
       </div>
-      <StickyFooter />
     </MuiThemeProvider>
   )
 }

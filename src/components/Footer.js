@@ -19,9 +19,10 @@ const textStyles = makeStyles({
 
 const useStyles = makeStyles(theme => ({
   root: {
+    width: '100%',
+    marginTop: 60,
     display: 'flex',
     flexDirection: 'column',
-    marginTop: 60,
     height: 200,
     backgroundColor: grey[100]
   },
@@ -69,7 +70,11 @@ export default function StickyFooter() {
             </Link>
           </Typography>
           <Typography paragraph align="center">
-            Hi there 👋🏾, If you would like to support the site, you can do so through my{' '}
+            Hi there{' '}
+            <span role="img" aria-label="hand wave">
+              👋🏾
+            </span>
+            , If you would like to support the site, you can do so through my{' '}
             <Link href="https://paypal.me/1PIRSQRD?locale.x=en_US" underline="none">
               PayPal
             </Link>
