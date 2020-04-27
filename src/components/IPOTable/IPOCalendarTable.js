@@ -7,13 +7,12 @@ import {
   TableCell,
   TableContainer,
   TableHead,
-  TableRow,
-  TablePagination
+  TablePagination,
+  TableRow
 } from '@material-ui/core'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import { MAX_SCREEN_WIDTH } from '../../constants/ui_contants'
 import { EMPTY_STRING } from '../../constants/util_constants'
 import { formatDate, formatPrice } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
