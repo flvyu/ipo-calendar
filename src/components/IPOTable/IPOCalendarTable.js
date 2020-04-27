@@ -13,17 +13,21 @@ import {
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { MAX_SCREEN_WIDTH } from '../../constants/ui_contants'
 import { EMPTY_STRING } from '../../constants/util_constants'
-import { MAX_SCREEN_WIDTH} from '../../constants/ui_contants'
 import { formatDate, formatPrice } from '../../helpers'
 import DataNotAvailable from './DataNotAvailable'
 
 const DEFAULT_ROWS_PER_PAGE = 25
 
 const StyledTableCell = withStyles(theme => ({
+  root: {
+    width: 200
+  },
   head: {
     backgroundColor: theme.palette.common.black,
     color: theme.palette.primary.light,
+    width: 200
   },
   body: {
     fontSize: 14,
@@ -40,9 +44,12 @@ const StyledTableRow = withStyles(theme => ({
 }))(TableRow)
 
 const useStyles = makeStyles({
+  root: {
+    maxWidth: MAX_SCREEN_WIDTH
+  },
   container: {
-    maxHeight: 500,
-    width: '100%'
+    width: 'auto',
+    maxHeight: 440
   },
   table: {
     minWidth: 900,
@@ -70,14 +77,14 @@ export default function IPOCalendarTable({ data }) {
       {data.length === 0 ? (
         <DataNotAvailable />
       ) : (
-        <Paper>
+        <Paper className={classes.root}>
           <TableContainer className={classes.container}>
             <Table stickyHeader className={classes.table} aria-label="IPO information table">
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Company</StyledTableCell>
                   <StyledTableCell align="center">Symbol</StyledTableCell>
-                  <StyledTableCell align="center">Price</StyledTableCell>
+                  <StyledTableCell align="center">Expected Price</StyledTableCell>
                   <StyledTableCell align="center">Expected Date</StyledTableCell>
                   <StyledTableCell align="center">Shares</StyledTableCell>
                   <StyledTableCell align="center">Volume</StyledTableCell>

@@ -62,6 +62,7 @@ export default function StickyFooter() {
       <Box mt={2} display="flex" justifyContent="center">
         <Box
           mt={4}
+          mb={4}
           width="80%"
           maxWidth={MAX_SCREEN_WIDTH}
           display="flex"
