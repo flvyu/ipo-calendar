@@ -8,6 +8,7 @@ import Layout from './components/Layout'
 import IPOCalendarTable from './components/IPOTable/IPOCalendarTable'
 import SocialMediaShare from './components/SocialMediaShare'
 import NotificationBar from './components/NotificationBar'
+import ProductHuntBadge from './components/ProductHuntBadge'
 import { Notifications } from '@material-ui/icons'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
@@ -74,6 +75,7 @@ function App() {
         ) : (
           <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
         )}
+        <ProductHuntBadge/>
       </div>
     </Layout>
   )
