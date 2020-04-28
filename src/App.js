@@ -28,18 +28,18 @@ function App() {
     ipoCalendar: []
   })
 
-  // useEffect(() => {
-  //   setLoading(true)
-  //   loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
-  //     .then(response => {
-  //       setIpoCalendarInformation(response)
-  //       setLoading(false)
-  //     })
-  //     .catch(error => {
-  //       setError(error)
-  //       setLoading(false)
-  //     })
-  // }, [startDate.formattedDate, endDate.formattedDate])
+  useEffect(() => {
+    setLoading(true)
+    loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
+      .then(response => {
+        setIpoCalendarInformation(response)
+        setLoading(false)
+      })
+      .catch(error => {
+        setError(error)
+        setLoading(false)
+      })
+  }, [startDate.formattedDate, endDate.formattedDate])
 
   return (
     <Layout
