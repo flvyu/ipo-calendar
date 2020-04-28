@@ -6,7 +6,7 @@ export default function ProductHuntBadge() {
     <Box mt={4} display="flex" justifyContent="center" alignItems="center">
       <a
         href="https://www.producthunt.com/posts/ipo-calendar?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ipo-calendar"
-        rel="noopener"
+        rel="noopener noreferrer"
         target="_blank">
         <img
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=195784&theme=light"
