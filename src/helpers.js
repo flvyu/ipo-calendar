@@ -19,6 +19,6 @@ export function formatDate(dateString) {
   if (!dateString) {
     return EMPTY_STRING
   }
-  const dateObj = moment(new Date(`${dateString} 00:00`))
+  const dateObj = moment(`${dateString} 00:00`)
   return dateObj.format('LL')
 }
