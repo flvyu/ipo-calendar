@@ -24,13 +24,14 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function Layout({ children, sidebar }) {
+export default function Layout({ children, sidebar, notificationBar }) {
   const classes = useStyles()
 
   return (
     <MuiThemeProvider theme={DefaultThemeLight}>
       <CssBaseline />
       <div className={classes.root}>
+        {notificationBar}
         <Grid className={classes.main} container component={Box} px={3} py={1}>
           <Grid item xs={12} sm={12} md={!sidebar ? 12 : 11}>
             {children}
@@ -56,5 +57,10 @@ Layout.propTypes = {
   /**
    * Content to show on the sidebar
    */
-  sidebar: PropTypes.node
+  sidebar: PropTypes.node,
+
+  /**
+   * A notification bar to show at the top of the screen.
+   */
+  notificationBar: PropTypes.node
 }
