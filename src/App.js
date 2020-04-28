@@ -13,7 +13,7 @@ import { DATE_SEPARATION } from './constants/util_constants'
 import { useSelectDate } from './hooks'
 import { loadIpoCalendarInformation } from './services'
 
-const currentDate = moment(new Date('2020-01-01 00:00'))
+const currentDate = moment('2020-01-01 00:00')
 const futureDate = moment(currentDate).add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
 
 function App() {
