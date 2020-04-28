@@ -7,6 +7,8 @@ import DateRangePicker from './components/DateRangePicker'
 import Layout from './components/Layout'
 import IPOCalendarTable from './components/IPOTable/IPOCalendarTable'
 import SocialMediaShare from './components/SocialMediaShare'
+import NotificationBar from './components/NotificationBar'
+import { Notifications } from '@material-ui/icons'
 import { BoxedProgress } from './components/CircularProgress'
 import { SITE_DESCRIPTION } from './constants/content_constants'
 import { DATE_SEPARATION } from './constants/util_constants'
@@ -26,21 +28,27 @@ function App() {
     ipoCalendar: []
   })
 
-  useEffect(() => {
-    setLoading(true)
-    loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
-      .then(response => {
-        setIpoCalendarInformation(response)
-        setLoading(false)
-      })
-      .catch(error => {
-        setError(error)
-        setLoading(false)
-      })
-  }, [startDate.formattedDate, endDate.formattedDate])
+  // useEffect(() => {
+  //   setLoading(true)
+  //   loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
+  //     .then(response => {
+  //       setIpoCalendarInformation(response)
+  //       setLoading(false)
+  //     })
+  //     .catch(error => {
+  //       setError(error)
+  //       setLoading(false)
+  //     })
+  // }, [startDate.formattedDate, endDate.formattedDate])
 
   return (
-    <Layout sidebar={<SocialMediaShare />}>
+    <Layout
+      sidebar={<SocialMediaShare />}
+      notificationBar={
+        <NotificationBar>
+          <Notifications /> You can add this app to your home screen for quick access!
+        </NotificationBar>
+      }>
       <Banner
         title={
           <>
