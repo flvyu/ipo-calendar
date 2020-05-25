@@ -1,6 +1,6 @@
 import {
   Box,
-  Chip,
+  Chip, Link,
   Paper,
   Table,
   TableBody,
@@ -71,7 +71,7 @@ export default function IPOCalendarTable({ data }) {
   }
 
   return (
-    <Box display="flex" justifyContent="center" mt={4}>
+    <Box display="flex" justifyContent="center" mt={4} flexDirection="column" alignItems="center">
       {data.length === 0 ? (
         <DataNotAvailable />
       ) : (
@@ -140,6 +140,12 @@ export default function IPOCalendarTable({ data }) {
           />
         </Paper>
       )}
+      <Link
+        href="https://finnhub.io/"
+        target="_blank"
+        rel="noopener noreferrer">
+        IPO Data from Finnhub
+      </Link>
     </Box>
   )
 }
