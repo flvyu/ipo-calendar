@@ -1,17 +1,6 @@
-/**
- * Sticky Footer
- *
- * Author    Flavio Andrade
- * Copyright 2020 CodeFogo
- *
- * @format
- */
+import { Link, Typography } from '@material-ui/core'
 
-import { Box, Link, Typography } from '@material-ui/core'
-
-import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import React from 'react'
-import grey from '@material-ui/core/colors/grey'
 import { makeStyles } from '@material-ui/core/styles'
 
 const textStyles = makeStyles({
@@ -19,18 +8,14 @@ const textStyles = makeStyles({
 })
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    width: '100%',
-    marginTop: 60,
-    display: 'flex',
-    flexDirection: 'column',
-    height: 200,
-    backgroundColor: grey[100]
-  },
   madeBy: {
     fontWeight: theme.typography.fontWeightBold
   },
   footer: {
+    position: 'absolute',
+    height: 80,
+    bottom: 0,
+    width: '100%',
     textAlign: 'center',
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
@@ -53,28 +38,15 @@ export default function StickyFooter() {
   const classes = useStyles()
 
   return (
-    <div className={classes.root}>
-      <Box mt={2} display="flex" justifyContent="center">
-        <Box
-          mt={4}
-          mb={4}
-          width="80%"
-          maxWidth={MAX_SCREEN_WIDTH}
-          display="flex"
-          justifyContent="center"
-          flexDirection="column">
-          <Typography className={classes.madeBy} align="center">
-            Made by{' '}
-            <Link href="https://flavioander.com/blog/" underline="none">
-              {' '}
-              Flavio Ander
-            </Link>
-          </Typography>
-        </Box>
-      </Box>
-      <footer className={classes.footer}>
-        <Copyright />
-      </footer>
-    </div>
+    <footer className={classes.footer}>
+      <Typography className={classes.madeBy} align="center">
+        Made by{' '}
+        <Link href="https://flavioander.com/blog/" underline="none">
+          {' '}
+          Flavio Ander
+        </Link>
+      </Typography>
+      <Copyright />
+    </footer>
   )
 }

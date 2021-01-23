@@ -17,8 +17,8 @@ import { loadIpoCalendarInformation } from './services'
 import moment from 'moment'
 import { useSelectDate } from './hooks'
 
-const currentDate = moment('2020-01-01 00:00')
-const futureDate = moment(currentDate).add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
+const currentDate = moment()
+const futureDate = moment().add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
 
 function App() {
   const startDate = useSelectDate(currentDate)
