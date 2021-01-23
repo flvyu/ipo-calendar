@@ -5,7 +5,7 @@ import { IconButton } from '@material-ui/core'
 import { Close } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
     width: '100%'
@@ -36,8 +36,7 @@ export default function NotificationBar({ children }) {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            textAlign="center"
-          >
+            textAlign="center">
             {children}
             <IconButton onClick={handleClose} className={classes.closeIconButton}>
               <Close />

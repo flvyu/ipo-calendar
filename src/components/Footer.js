@@ -7,17 +7,18 @@
  * @format
  */
 
+import { Box, Link, Typography } from '@material-ui/core'
+
+import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import React from 'react'
 import grey from '@material-ui/core/colors/grey'
-import { Box, Link, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 
 const textStyles = makeStyles({
   textColor: '#fff'
 })
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     marginTop: 60,
@@ -64,19 +65,9 @@ export default function StickyFooter() {
           flexDirection="column">
           <Typography className={classes.madeBy} align="center">
             Made by{' '}
-            <Link href="https://twitter.com/1PIRSQRD" underline="none">
+            <Link href="https://flavioander.com/blog/" underline="none">
               {' '}
-              Flavio Andrade
-            </Link>
-          </Typography>
-          <Typography paragraph align="center">
-            Hi there{' '}
-            <span role="img" aria-label="hand wave">
-              👋🏾
-            </span>
-            , If you would like to support the site, you can do so through my{' '}
-            <Link href="https://paypal.me/1PIRSQRD?locale.x=en_US" underline="none">
-              PayPal
+              Flavio Ander
             </Link>
           </Typography>
         </Box>

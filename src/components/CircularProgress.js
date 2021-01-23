@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, CircularProgress } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   progress: {
     color: theme.palette.primary.dark,
     animationDuration: '550ms'

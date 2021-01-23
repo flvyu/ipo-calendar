@@ -6,7 +6,7 @@ import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import { MuiThemeProvider, CssBaseline, Box, Grid } from '@material-ui/core'
 import { DefaultThemeLight } from '../theme/theme'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     margin: 0,

@@ -51,5 +51,8 @@
     "requirePragma": false,
     "insertPragma": false,
     "trailingComma": "none"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }

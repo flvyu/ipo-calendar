@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Box, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     borderBottom: `2px solid ${theme.palette.primary.light}`
   },
