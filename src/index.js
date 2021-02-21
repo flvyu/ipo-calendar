@@ -1,8 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as serviceWorker from './serviceWorker'
+
 import App from './App'
 import { Helmet } from 'react-helmet'
-import * as serviceWorker from './serviceWorker'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 const AppToRender = () => {
   const year = new Date().getFullYear()
@@ -10,7 +11,7 @@ const AppToRender = () => {
   return (
     <React.StrictMode>
       <Helmet>
-        <title>{`Upcoming IPOs (Initial Public Offering)| ${year} IPO Calendar`}</title>
+        <title>{`Quickly find Upcoming and Recent IPOs | ${year} IPO Calendar`}</title>
       </Helmet>
       <App />
     </React.StrictMode>
