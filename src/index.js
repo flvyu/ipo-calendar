@@ -3,7 +3,7 @@ import { MuiThemeProvider } from '@material-ui/core'
 
 import { DefaultThemeLight } from './theme/theme'
 import { CompanyDataPage, Home } from './pages'
-import { Router, globalHistory } from '@reach/router'
+import { Router } from '@reach/router'
 import ReactGA from 'react-ga'
 
 import React from 'react'
@@ -12,14 +12,6 @@ import ReactDOM from 'react-dom'
 ReactGA.initialize('UA-77721707-8', {
   debug: process.env.NODE_ENV === 'development',
   titleCase: false,
-})
-
-globalHistory.listen(({ location }) => {
-  if (process.env.NODE_ENV !== 'development') {
-    ReactGA.pageview(window.location.pathname + window.location.search)
-  } else {
-    console.log(location.pathname)
-  }
 })
 
 const AppToRender = () => {

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../components/Layout'
 import { Helmet } from 'react-helmet'
 import { Typography, AppBar, Toolbar, IconButton, Box } from '@material-ui/core'
@@ -8,6 +8,7 @@ import { Link as RouterLink } from '@reach/router'
 import { Home as HomeIcon } from '@material-ui/icons'
 import { COMPANY_INFORMATION_FIELDS } from '../constants/ui_contants'
 import { EMPTY_STRING } from '../constants/util_constants'
+import ReactGA from 'react-ga'
 
 const useStyles = makeStyles((theme) => ({
   title: {
@@ -37,6 +38,15 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 export default function CompanyDataPage({ location }) {
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development') {
+      ReactGA.pageview(location.pathname + location.search)
+      return
+    } else {
+      console.log(location.pathname)
+    }
+  }, [location.pathname, location.search])
+
   const classes = useStyles()
   const data = location.state.data
   const { name, totalSharesValue } = data
