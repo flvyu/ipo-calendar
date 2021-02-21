@@ -1,6 +1,5 @@
-import { Box, CssBaseline, Grid, MuiThemeProvider } from '@material-ui/core'
+import { Box, CssBaseline, Grid  } from '@material-ui/core'
 
-import { DefaultThemeLight } from '../theme/theme'
 import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import PropTypes from 'prop-types'
 import React from 'react'
@@ -32,7 +31,7 @@ export default function Layout({ children, sidebar, notificationBar }) {
   const classes = useStyles()
 
   return (
-    <MuiThemeProvider theme={DefaultThemeLight}>
+    <>
       <CssBaseline />
       <div className={classes.root}>
         {notificationBar}
@@ -56,7 +55,7 @@ export default function Layout({ children, sidebar, notificationBar }) {
         </div>
         <StickyFooter />
       </div>
-    </MuiThemeProvider>
+    </>
   )
 }
 

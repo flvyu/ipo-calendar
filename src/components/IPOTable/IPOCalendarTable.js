@@ -131,6 +131,7 @@ export default function IPOCalendarTable({ data }) {
                             component={RouterLink}
                             className={classes.link}
                             to={slug(name)}
+                            state={{ data: companyData }}
                           >
                             {name}
                           </Link>

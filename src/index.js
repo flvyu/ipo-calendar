@@ -1,5 +1,7 @@
 import * as serviceWorker from './serviceWorker'
+import { MuiThemeProvider } from '@material-ui/core'
 
+import { DefaultThemeLight } from './theme/theme'
 import { CompanyDataPage, Home } from './pages'
 
 import React from 'react'
@@ -9,10 +11,12 @@ import { Router } from '@reach/router'
 const AppToRender = () => {
   return (
     <React.StrictMode>
-      <Router>
-        <Home path="/" />
-        <CompanyDataPage path="/:companySlug" />
-      </Router>
+      <MuiThemeProvider theme={DefaultThemeLight}>
+        <Router>
+          <Home path="/" />
+          <CompanyDataPage path="/:companySlug" />
+        </Router>
+      </MuiThemeProvider>
     </React.StrictMode>
   )
 }
