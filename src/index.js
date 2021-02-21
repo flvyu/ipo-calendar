@@ -1,7 +1,7 @@
 import * as serviceWorker from './serviceWorker'
 
-import App from './App'
 import { Helmet } from 'react-helmet'
+import Home from './Home'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
@@ -13,7 +13,7 @@ const AppToRender = () => {
       <Helmet>
         <title>{`Quickly find Upcoming and Recent IPOs | ${year} IPO Calendar`}</title>
       </Helmet>
-      <App />
+      <Home />
     </React.StrictMode>
   )
 }
