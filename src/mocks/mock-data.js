@@ -4,11 +4,11 @@ export const mockData = {
       date: '2020-05-01',
       exchange: 'Estalee Capital',
       name: 'Estalee',
-      numberOfShares: 15000000,
+      numberOfShares: 15000000000,
       price: '10.00',
       status: 'priced',
       symbol: 'ESTA',
-      totalSharesValue: 150000000,
+      totalSharesValue: 150000000000,
     },
     {
       date: '2020-05-01',
