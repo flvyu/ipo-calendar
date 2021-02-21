@@ -8,7 +8,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'ESTA',
-      totalSharesValue: 150000000
+      totalSharesValue: 150000000,
     },
     {
       date: '2020-05-01',
@@ -18,7 +18,7 @@ export const mockData = {
       price: '16.00',
       status: 'priced',
       symbol: 'LYRA',
-      totalSharesValue: 56000000
+      totalSharesValue: 56000000,
     },
     {
       date: '2020-05-01',
@@ -28,7 +28,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 15000000
+      totalSharesValue: 15000000,
     },
     {
       date: '2020-05-01',
@@ -38,7 +38,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'LGVWU',
-      totalSharesValue: 360000000
+      totalSharesValue: 360000000,
     },
     {
       date: '2020-04-30',
@@ -48,7 +48,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-04-30',
@@ -58,7 +58,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'FVACU',
-      totalSharesValue: 300000000
+      totalSharesValue: 300000000,
     },
     {
       date: '2020-04-28',
@@ -68,7 +68,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'IPOBU',
-      totalSharesValue: 360000000
+      totalSharesValue: 360000000,
     },
     {
       date: '2020-04-24',
@@ -78,7 +78,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-04-24',
@@ -88,7 +88,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-04-24',
@@ -98,7 +98,7 @@ export const mockData = {
       price: '16.00',
       status: 'priced',
       symbol: 'ORIC',
-      totalSharesValue: 120000000
+      totalSharesValue: 120000000,
     },
     {
       date: '2020-04-24',
@@ -108,7 +108,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'PCPLU',
-      totalSharesValue: 360000000
+      totalSharesValue: 360000000,
     },
     {
       date: '2020-04-24',
@@ -118,7 +118,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'CHAQU',
-      totalSharesValue: 85000000
+      totalSharesValue: 85000000,
     },
     {
       date: '2020-04-22',
@@ -128,7 +128,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'IPOCU',
-      totalSharesValue: 720000000
+      totalSharesValue: 720000000,
     },
     {
       date: '2020-04-15',
@@ -138,7 +138,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 150000
+      totalSharesValue: 150000,
     },
     {
       date: '2020-04-08',
@@ -148,7 +148,7 @@ export const mockData = {
       price: '16.00',
       status: 'priced',
       symbol: 'KROS',
-      totalSharesValue: 96000000
+      totalSharesValue: 96000000,
     },
     {
       date: '2020-04-08',
@@ -158,7 +158,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 24275
+      totalSharesValue: 24275,
     },
     {
       date: '2020-04-07',
@@ -168,7 +168,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-04-03',
@@ -178,7 +178,7 @@ export const mockData = {
       price: '18.00',
       status: 'priced',
       symbol: 'ZNTL',
-      totalSharesValue: 165240000
+      totalSharesValue: 165240000,
     },
     {
       date: '2020-04-01',
@@ -188,7 +188,7 @@ export const mockData = {
       price: '5.50',
       status: 'priced',
       symbol: 'WIMI',
-      totalSharesValue: 26125000
+      totalSharesValue: 26125000,
     },
     {
       date: '2020-03-18',
@@ -198,7 +198,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'UTME',
-      totalSharesValue: 21562500
+      totalSharesValue: 21562500,
     },
     {
       date: '2020-03-13',
@@ -208,7 +208,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-03-12',
@@ -218,7 +218,7 @@ export const mockData = {
       price: '16.00',
       status: 'priced',
       symbol: 'IMRA',
-      totalSharesValue: 75200000
+      totalSharesValue: 75200000,
     },
     {
       date: '2020-03-11',
@@ -228,7 +228,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'DFPHU',
-      totalSharesValue: 200000000
+      totalSharesValue: 200000000,
     },
     {
       date: '2020-03-06',
@@ -238,7 +238,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'LSACU',
-      totalSharesValue: 60000000
+      totalSharesValue: 60000000,
     },
     {
       date: '2020-03-06',
@@ -248,7 +248,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'FEACU',
-      totalSharesValue: 600000000
+      totalSharesValue: 600000000,
     },
     {
       date: '2020-03-06',
@@ -258,7 +258,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 991011
+      totalSharesValue: 991011,
     },
     {
       date: '2020-03-05',
@@ -268,7 +268,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-03-04',
@@ -278,7 +278,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-03-03',
@@ -288,7 +288,7 @@ export const mockData = {
       price: '19.00',
       status: 'priced',
       symbol: 'GFL',
-      totalSharesValue: 1425000000
+      totalSharesValue: 1425000000,
     },
     {
       date: '2020-02-28',
@@ -298,7 +298,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'PCOR',
-      totalSharesValue: 100000000
+      totalSharesValue: 100000000,
     },
     {
       date: '2020-02-24',
@@ -308,7 +308,7 @@ export const mockData = {
       price: '4.00',
       status: 'priced',
       symbol: 'ZCMD',
-      totalSharesValue: 12000000
+      totalSharesValue: 12000000,
     },
     {
       date: '2020-02-21',
@@ -318,7 +318,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'DMYTU',
-      totalSharesValue: 200000000
+      totalSharesValue: 200000000,
     },
     {
       date: '2020-02-21',
@@ -328,7 +328,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 80000
+      totalSharesValue: 80000,
     },
     {
       date: '2020-02-20',
@@ -338,7 +338,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'ESSCU',
-      totalSharesValue: 120000000
+      totalSharesValue: 120000000,
     },
     {
       date: '2020-02-19',
@@ -348,7 +348,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-02-18',
@@ -358,7 +358,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'FCST',
-      totalSharesValue: 17250000
+      totalSharesValue: 17250000,
     },
     {
       date: '2020-02-14',
@@ -368,7 +368,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'NBACU',
-      totalSharesValue: 50000000
+      totalSharesValue: 50000000,
     },
     {
       date: '2020-02-14',
@@ -378,7 +378,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'CCXXU',
-      totalSharesValue: 1000000000
+      totalSharesValue: 1000000000,
     },
     {
       date: '2020-02-13',
@@ -388,7 +388,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-02-13',
@@ -398,7 +398,7 @@ export const mockData = {
       price: '17.00',
       status: 'priced',
       symbol: 'RVMD',
-      totalSharesValue: 238000000
+      totalSharesValue: 238000000,
     },
     {
       date: '2020-02-13',
@@ -408,7 +408,7 @@ export const mockData = {
       price: '6.50',
       status: 'priced',
       symbol: 'MEDS',
-      totalSharesValue: 5241938
+      totalSharesValue: 5241938,
     },
     {
       date: '2020-02-13',
@@ -418,7 +418,7 @@ export const mockData = {
       price: '5.00',
       status: 'priced',
       symbol: 'GRIL',
-      totalSharesValue: 7700000
+      totalSharesValue: 7700000,
     },
     {
       date: '2020-02-13',
@@ -428,7 +428,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'ZGYHU',
-      totalSharesValue: 60000000
+      totalSharesValue: 60000000,
     },
     {
       date: '2020-02-12',
@@ -438,7 +438,7 @@ export const mockData = {
       price: '10.50',
       status: 'priced',
       symbol: 'HUIZ',
-      totalSharesValue: 55125000
+      totalSharesValue: 55125000,
     },
     {
       date: '2020-02-11',
@@ -448,7 +448,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'CCACU',
-      totalSharesValue: 240000000
+      totalSharesValue: 240000000,
     },
     {
       date: '2020-02-11',
@@ -458,7 +458,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'GNRSU',
-      totalSharesValue: 150000000
+      totalSharesValue: 150000000,
     },
     {
       date: '2020-02-11',
@@ -468,7 +468,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 7800000
+      totalSharesValue: 7800000,
     },
     {
       date: '2020-02-11',
@@ -478,7 +478,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 17250000
+      totalSharesValue: 17250000,
     },
     {
       date: '2020-02-07',
@@ -488,7 +488,7 @@ export const mockData = {
       price: '18.50',
       status: 'priced',
       symbol: 'PFHD',
-      totalSharesValue: 57350000
+      totalSharesValue: 57350000,
     },
     {
       date: '2020-02-07',
@@ -498,7 +498,7 @@ export const mockData = {
       price: '19.00',
       status: 'priced',
       symbol: 'NREF',
-      totalSharesValue: 95000000
+      totalSharesValue: 95000000,
     },
     {
       date: '2020-02-07',
@@ -508,7 +508,7 @@ export const mockData = {
       price: '12.00',
       status: 'priced',
       symbol: 'ONEW',
-      totalSharesValue: 55384620
+      totalSharesValue: 55384620,
     },
     {
       date: '2020-02-06',
@@ -518,7 +518,7 @@ export const mockData = {
       price: '27.00',
       status: 'priced',
       symbol: 'PPD',
-      totalSharesValue: 1620000000
+      totalSharesValue: 1620000000,
     },
     {
       date: '2020-02-06',
@@ -528,7 +528,7 @@ export const mockData = {
       price: '12.00',
       status: 'priced',
       symbol: 'CSPR',
-      totalSharesValue: 100200000
+      totalSharesValue: 100200000,
     },
     {
       date: '2020-02-06',
@@ -538,7 +538,7 @@ export const mockData = {
       price: '17.00',
       status: 'priced',
       symbol: 'SDGR',
-      totalSharesValue: 201999984
+      totalSharesValue: 201999984,
     },
     {
       date: '2020-02-06',
@@ -548,7 +548,7 @@ export const mockData = {
       price: '17.00',
       status: 'priced',
       symbol: 'BEAM',
-      totalSharesValue: 180000012
+      totalSharesValue: 180000012,
     },
     {
       date: '2020-02-04',
@@ -558,7 +558,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-02-04',
@@ -568,7 +568,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: "IPV'U",
-      totalSharesValue: 210000000
+      totalSharesValue: 210000000,
     },
     {
       date: '2020-02-03',
@@ -578,7 +578,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'PASG',
-      totalSharesValue: 216000000
+      totalSharesValue: 216000000,
     },
     {
       date: '2020-01-31',
@@ -588,7 +588,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-01-31',
@@ -598,7 +598,7 @@ export const mockData = {
       price: '26.00',
       status: 'priced',
       symbol: 'REYN',
-      totalSharesValue: 1226420000
+      totalSharesValue: 1226420000,
     },
     {
       date: '2020-01-30',
@@ -608,7 +608,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-01-30',
@@ -618,7 +618,7 @@ export const mockData = {
       price: '12.00',
       status: 'priced',
       symbol: 'ANPC',
-      totalSharesValue: 16000320
+      totalSharesValue: 16000320,
     },
     {
       date: '2020-01-29',
@@ -628,7 +628,7 @@ export const mockData = {
       price: '6.00',
       status: 'priced',
       symbol: 'ANVS',
-      totalSharesValue: 12000000
+      totalSharesValue: 12000000,
     },
     {
       date: '2020-01-24',
@@ -638,7 +638,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'GHIVU',
-      totalSharesValue: 400000000
+      totalSharesValue: 400000000,
     },
     {
       date: '2020-01-24',
@@ -648,7 +648,7 @@ export const mockData = {
       price: '10.00',
       status: 'priced',
       symbol: 'SCVXU',
-      totalSharesValue: 200000000
+      totalSharesValue: 200000000,
     },
     {
       date: '2020-01-21',
@@ -658,7 +658,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'GOXS',
-      totalSharesValue: 17250000
+      totalSharesValue: 17250000,
     },
     {
       date: '2020-01-21',
@@ -668,7 +668,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'UTXOU',
-      totalSharesValue: 57500000
+      totalSharesValue: 57500000,
     },
     {
       date: '2020-01-17',
@@ -678,7 +678,7 @@ export const mockData = {
       price: '13.00',
       status: 'priced',
       symbol: 'VEL',
-      totalSharesValue: 94250000
+      totalSharesValue: 94250000,
     },
     {
       date: '2020-01-17',
@@ -688,7 +688,7 @@ export const mockData = {
       price: '11.00',
       status: 'priced',
       symbol: 'LIZI',
-      totalSharesValue: 45100000
+      totalSharesValue: 45100000,
     },
     {
       date: '2020-01-17',
@@ -698,7 +698,7 @@ export const mockData = {
       price: '13.50',
       status: 'priced',
       symbol: 'DNK',
-      totalSharesValue: 129600000
+      totalSharesValue: 129600000,
     },
     {
       date: '2020-01-17',
@@ -708,7 +708,7 @@ export const mockData = {
       price: '14.00',
       status: 'priced',
       symbol: 'IMAB',
-      totalSharesValue: 103703600
+      totalSharesValue: 103703600,
     },
     {
       date: '2020-01-17',
@@ -718,7 +718,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'JANA',
-      totalSharesValue: 11500000
+      totalSharesValue: 11500000,
     },
     {
       date: '2020-01-14',
@@ -728,7 +728,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-01-14',
@@ -738,7 +738,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: '',
-      totalSharesValue: 1000000
+      totalSharesValue: 1000000,
     },
     {
       date: '2020-01-08',
@@ -748,7 +748,7 @@ export const mockData = {
       price: null,
       status: 'withdrawn',
       symbol: null,
-      totalSharesValue: null
+      totalSharesValue: null,
     },
     {
       date: '2020-01-06',
@@ -758,7 +758,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'ARQT',
-      totalSharesValue: 159375000
+      totalSharesValue: 159375000,
     },
     {
       date: '2020-01-03',
@@ -768,7 +768,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'BDTX',
-      totalSharesValue: 201140004
+      totalSharesValue: 201140004,
     },
     {
       date: '2020-01-03',
@@ -778,7 +778,7 @@ export const mockData = {
       price: null,
       status: 'filed',
       symbol: 'ONEM',
-      totalSharesValue: 245000000
-    }
-  ]
+      totalSharesValue: 245000000,
+    },
+  ],
 }

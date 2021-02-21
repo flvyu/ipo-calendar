@@ -7,7 +7,8 @@ export default function ProductHuntBadge() {
       <a
         href="https://www.producthunt.com/posts/ipo-calendar?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-ipo-calendar"
         rel="noopener noreferrer"
-        target="_blank">
+        target="_blank"
+      >
         <img
           src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=195784&theme=light"
           alt="IPO Calendar - Stay up to date with upcoming IPOs | Product Hunt Embed"

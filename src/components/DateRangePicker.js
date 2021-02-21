@@ -3,13 +3,16 @@ import PropTypes from 'prop-types'
 import { Grid } from '@material-ui/core'
 import MomentUtils from '@date-io/moment'
 import { DEFAULT_DATE_FORMAT } from '../constants/util_constants'
-import { MuiPickersUtilsProvider, KeyboardDatePicker } from '@material-ui/pickers'
+import {
+  MuiPickersUtilsProvider,
+  KeyboardDatePicker,
+} from '@material-ui/pickers'
 
 export default function DateRangePicker({
   startDate,
   endDate,
   handleStartDateChange,
-  handleEndDateChange
+  handleEndDateChange,
 }) {
   return (
     <MuiPickersUtilsProvider utils={MomentUtils}>
@@ -26,7 +29,7 @@ export default function DateRangePicker({
             value={startDate}
             onChange={handleStartDateChange}
             KeyboardButtonProps={{
-              'aria-label': 'Select the start date'
+              'aria-label': 'Select the start date',
             }}
           />
         </Grid>
@@ -42,7 +45,7 @@ export default function DateRangePicker({
             value={endDate}
             onChange={handleEndDateChange}
             KeyboardButtonProps={{
-              'aria-label': 'Select the end date'
+              'aria-label': 'Select the end date',
             }}
           />
         </Grid>
@@ -70,5 +73,5 @@ DateRangePicker.propTypes = {
   /**
    * A function to update the end date
    */
-  handleEndDateChange: PropTypes.func.isRequired
+  handleEndDateChange: PropTypes.func.isRequired,
 }

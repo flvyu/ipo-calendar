@@ -5,15 +5,15 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    borderBottom: `2px solid ${theme.palette.primary.light}`
+    borderBottom: `2px solid ${theme.palette.primary.light}`,
   },
   title: {
     color: theme.palette.primary.main,
-    fontWeight: theme.typography.fontWeightBold
+    fontWeight: theme.typography.fontWeightBold,
   },
   description: {
-    color: theme.palette.secondary.dark
-  }
+    color: theme.palette.secondary.dark,
+  },
 }))
 export default function Banner({ title, description }) {
   const classes = useStyles()
@@ -27,9 +27,15 @@ export default function Banner({ title, description }) {
       flexDirection="column"
       justifyContent="center"
       alignItems="center"
-      className={classes.root}>
+      className={classes.root}
+    >
       <Box mb={2}>
-        <Typography align="center" className={classes.title} variant="h4" component="h1">
+        <Typography
+          align="center"
+          className={classes.title}
+          variant="h4"
+          component="h1"
+        >
           {title}
         </Typography>
       </Box>
@@ -49,10 +55,10 @@ Banner.propTypes = {
   /**
    * Description for the banner
    */
-  description: PropTypes.string
+  description: PropTypes.string,
 }
 
 Banner.defaultProps = {
   title: 'Ipo Calendar',
-  description: ''
+  description: '',
 }

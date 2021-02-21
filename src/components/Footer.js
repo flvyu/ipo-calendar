@@ -4,12 +4,12 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 
 const textStyles = makeStyles({
-  textColor: '#fff'
+  textColor: '#fff',
 })
 
 const useStyles = makeStyles((theme) => ({
   madeBy: {
-    fontWeight: theme.typography.fontWeightBold
+    fontWeight: theme.typography.fontWeightBold,
   },
   footer: {
     position: 'absolute',
@@ -20,8 +20,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
     backgroundColor:
-      theme.palette.type === 'dark' ? theme.palette.grey[800] : theme.palette.grey[200]
-  }
+      theme.palette.type === 'dark'
+        ? theme.palette.grey[800]
+        : theme.palette.grey[200],
+  },
 }))
 
 function Copyright() {

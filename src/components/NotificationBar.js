@@ -8,11 +8,11 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
   root: {
     position: 'relative',
-    width: '100%'
+    width: '100%',
   },
   closeIconButton: {
-    margin: theme.spacing(0.5)
-  }
+    margin: theme.spacing(0.5),
+  },
 }))
 
 export default function NotificationBar({ children }) {
@@ -36,9 +36,13 @@ export default function NotificationBar({ children }) {
             display="flex"
             justifyContent="center"
             alignItems="center"
-            textAlign="center">
+            textAlign="center"
+          >
             {children}
-            <IconButton onClick={handleClose} className={classes.closeIconButton}>
+            <IconButton
+              onClick={handleClose}
+              className={classes.closeIconButton}
+            >
               <Close />
             </IconButton>
           </Box>

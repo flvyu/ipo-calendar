@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme) => ({
   progress: {
     color: theme.palette.primary.dark,
-    animationDuration: '550ms'
-  }
+    animationDuration: '550ms',
+  },
 }))
 
 export function BoxedProgress({ size, boxProps, ...rest }) {
@@ -15,7 +15,12 @@ export function BoxedProgress({ size, boxProps, ...rest }) {
 
   return (
     <Box display="flex" justifyContent="center" {...boxProps}>
-      <CircularProgress size={size} className={classes.progress} thickness={2} {...rest} />
+      <CircularProgress
+        size={size}
+        className={classes.progress}
+        thickness={2}
+        {...rest}
+      />
     </Box>
   )
 }
@@ -29,10 +34,10 @@ BoxedProgress.propTypes = {
   /**
    * Any props for the box root component
    */
-  boxProps: PropTypes.object
+  boxProps: PropTypes.object,
 }
 
 BoxedProgress.defaultProps = {
   size: 20,
-  boxProps: {}
+  boxProps: {},
 }

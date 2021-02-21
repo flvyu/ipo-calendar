@@ -11,21 +11,21 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     position: 'relative',
-    minHeight: '100vh'
+    minHeight: '100vh',
   },
   main: {
     margin: '0 auto',
-    maxWidth: MAX_SCREEN_WIDTH
+    maxWidth: MAX_SCREEN_WIDTH,
   },
   wrap: {
-    paddingBottom: 80
+    paddingBottom: 80,
   },
   sidebarFixed: {
     [theme.breakpoints.up('md')]: {
       position: 'fixed',
-      marginLeft: theme.spacing(3)
-    }
-  }
+      marginLeft: theme.spacing(3),
+    },
+  },
 }))
 
 export default function Layout({ children, sidebar, notificationBar }) {
@@ -37,7 +37,13 @@ export default function Layout({ children, sidebar, notificationBar }) {
       <div className={classes.root}>
         {notificationBar}
         <div className={classes.wrap}>
-          <Grid className={classes.main} container component={Box} px={3} py={1}>
+          <Grid
+            className={classes.main}
+            container
+            component={Box}
+            px={3}
+            py={1}
+          >
             <Grid item xs={12} sm={12} md={!sidebar ? 12 : 11}>
               {children}
             </Grid>
@@ -68,5 +74,5 @@ Layout.propTypes = {
   /**
    * A notification bar to show at the top of the screen.
    */
-  notificationBar: PropTypes.node
+  notificationBar: PropTypes.node,
 }

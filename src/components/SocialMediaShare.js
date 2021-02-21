@@ -11,24 +11,28 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   RedditShareButton,
-  TwitterShareButton
+  TwitterShareButton,
 } from 'react-share'
 import { makeStyles } from '@material-ui/core/styles'
 import { PROD_SITE_URL, SITE_META } from '../constants/content_constants'
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    color: theme.palette.secondary.dark
+    color: theme.palette.secondary.dark,
   },
   button: {
     '&:focus': {
       outline: 'none',
-      textDecoration: 'none'
-    }
-  }
+      textDecoration: 'none',
+    },
+  },
 }))
 
-const withDefaultSocialIconProps = (IconComponent, ButtonComponent, buttonProps) => (
+const withDefaultSocialIconProps = (
+  IconComponent,
+  ButtonComponent,
+  buttonProps
+) => (
   <Box m={1}>
     <ButtonComponent {...buttonProps}>
       <IconComponent size={32} round={true} />
@@ -45,33 +49,39 @@ export default function SocialMediaShare() {
       mt={4}
       display="flex"
       flexDirection={isLargeScreen ? 'column' : 'row'}
-      justifyContent="center">
+      justifyContent="center"
+    >
       {isLargeScreen && (
-        <Typography className={classes.title} color="secondary" variant="body2" gutterBottom>
+        <Typography
+          className={classes.title}
+          color="secondary"
+          variant="body2"
+          gutterBottom
+        >
           Share <Share color="primary" style={{ fontSize: 14 }} />
         </Typography>
       )}
       {withDefaultSocialIconProps(FacebookIcon, FacebookShareButton, {
         className: classes.button,
         url: SITE_META.source,
-        quote: SITE_META.title
+        quote: SITE_META.title,
       })}
       {withDefaultSocialIconProps(LinkedinIcon, LinkedinShareButton, {
         className: classes.button,
         url: SITE_META.source,
         title: SITE_META.title,
         summary: SITE_META.description,
-        source: PROD_SITE_URL
+        source: PROD_SITE_URL,
       })}
       {withDefaultSocialIconProps(RedditIcon, RedditShareButton, {
         className: classes.button,
         url: SITE_META.source,
-        title: SITE_META.title
+        title: SITE_META.title,
       })}
       {withDefaultSocialIconProps(TwitterIcon, TwitterShareButton, {
         className: classes.button,
         url: SITE_META.source,
-        hashtags: SITE_META.hashtags
+        hashtags: SITE_META.hashtags,
       })}
     </Box>
   )

@@ -17,10 +17,10 @@ const overrides = {
       textTransform: 'capitalize',
       '&:focus': {
         outline: 'none',
-        textDecoration: 'none'
-      }
-    }
-  }
+        textDecoration: 'none',
+      },
+    },
+  },
 }
 export const DefaultThemeLight = createMuiTheme({
   palette: {
@@ -28,16 +28,16 @@ export const DefaultThemeLight = createMuiTheme({
       light: PRIMARY_LIGHT,
       main: PRIMARY,
       dark: PRIMARY_DARK,
-      contrastText: BLACK
+      contrastText: BLACK,
     },
     secondary: {
       light: SECONDARY_LIGHT,
       main: SECONDARY,
       dark: SECONDARY_DARK,
-      contrastText: BLACK
-    }
+      contrastText: BLACK,
+    },
   },
   overrides: {
-    ...overrides
-  }
+    ...overrides,
+  },
 })
