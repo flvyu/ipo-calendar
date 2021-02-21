@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Grid  } from '@material-ui/core'
+import { Box, CssBaseline, Grid } from '@material-ui/core'
 
 import { MAX_SCREEN_WIDTH } from '../constants/ui_contants'
 import PropTypes from 'prop-types'
