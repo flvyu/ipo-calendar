@@ -4,13 +4,13 @@ import { DEFAULT_DATE_FORMAT } from './constants/util_constants'
 export function useSelectDate(defaultDate, format = DEFAULT_DATE_FORMAT) {
   const [selectedDate, setSelectedDate] = useState(defaultDate)
 
-  const handleDateChange = date => {
+  const handleDateChange = (date) => {
     setSelectedDate(date)
   }
 
   return {
     date: selectedDate,
     onDateChange: handleDateChange,
-    formattedDate: selectedDate ? selectedDate.format(format) : ''
+    formattedDate: selectedDate ? selectedDate.format(format) : '',
   }
 }

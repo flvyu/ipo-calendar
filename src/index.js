@@ -4,14 +4,14 @@ import { CompanyDataPage, Home } from './pages'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from "@reach/router"
+import { Router } from '@reach/router'
 
 const AppToRender = () => {
   return (
     <React.StrictMode>
       <Router>
-        <Home path="/"/>
-        <CompanyDataPage path="/:companySlug"/>
+        <Home path="/" />
+        <CompanyDataPage path="/:companySlug" />
       </Router>
     </React.StrictMode>
   )
