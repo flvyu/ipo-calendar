@@ -1,7 +1,7 @@
 import * as serviceWorker from './serviceWorker'
 
 import { Helmet } from 'react-helmet'
-import Home from './Home'
+import Home from './pages/Home'
 import React from 'react'
 import ReactDOM from 'react-dom'
 
