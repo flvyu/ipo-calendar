@@ -2,12 +2,12 @@ export const mockData = {
   ipoCalendar: [
     {
       date: '2020-05-01',
-      exchange: 'NASDAQ Capital',
-      name: 'Collective Growth Corp',
+      exchange: 'Estalee Capital',
+      name: 'Estalee',
       numberOfShares: 15000000,
       price: '10.00',
       status: 'priced',
-      symbol: 'CGROU',
+      symbol: 'ESTA',
       totalSharesValue: 150000000
     },
     {

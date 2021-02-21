@@ -1,4 +1,5 @@
 import wretch from "wretch";
+import {mockData} from './mocks/mock-data'
 
 const IPO_CALENDAR_API_ENDPOINT = "https://finnhub.io/api/v1/calendar/ipo";
 
@@ -7,16 +8,7 @@ const updateQuery = query => ({ ...query, token: process.env.REACT_APP_FINNHUB_A
 const loadDevData = () => {
   return new Promise((resolve, _) => {
     setTimeout(() => {
-      resolve({
-          name,
-          symbol,
-          price,
-          date: ipoDate,
-          numberOfShares,
-          totalSharesValue,
-          status,
-          exchange:
-      });
+      resolve(mockData);
     }, 300);
   });
 }
