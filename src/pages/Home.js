@@ -21,7 +21,7 @@ import { useSelectDate } from '../hooks'
 const currentDate = moment()
 const futureDate = moment().add(DATE_SEPARATION.amount, DATE_SEPARATION.type)
 
-function Home() {
+export default function Home() {
   const startDate = useSelectDate(currentDate)
   const endDate = useSelectDate(futureDate)
 
@@ -92,5 +92,3 @@ function Home() {
     </Layout>
   )
 }
-
-export default Home

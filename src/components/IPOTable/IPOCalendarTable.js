@@ -9,12 +9,12 @@ import {
   TableContainer,
   TableHead,
   TablePagination,
-  TableRow
+  TableRow,
 } from '@material-ui/core'
 import React, { useState } from 'react'
 import { formatDate, formatPrice } from '../../helpers/FormatHelpers'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
-
+import slug from 'limax'
 import DataNotAvailable from './DataNotAvailable'
 import { EMPTY_STRING } from '../../constants/util_constants'
 import PropTypes from 'prop-types'
@@ -44,18 +44,22 @@ const StyledTableRow = withStyles(theme => ({
   }
 }))(TableRow)
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%'
   },
   container: {
-    maxHeight: 500
+    maxHeight: 500,
+    overFlowY: 'scroll'
   },
   table: {
     minWidth: 1200,
     overflowX: 'scroll'
+  },
+  link: {
+    color: theme.palette.primary.dark,
   }
-})
+}))
 
 export default function IPOCalendarTable({ data }) {
   const classes = useStyles()
@@ -79,7 +83,7 @@ export default function IPOCalendarTable({ data }) {
       ) : (
         <Paper className={classes.root}>
           <TableContainer className={classes.container}>
-            <Table stickyHeader className={classes.table} aria-label="IPO information table">
+            <Table stickyHeader className={classes.table} aria-label="Company IPO data table">
               <TableHead>
                 <TableRow>
                   <StyledTableCell>Company</StyledTableCell>
@@ -108,7 +112,7 @@ export default function IPOCalendarTable({ data }) {
                     }) => (
                       <StyledTableRow key={`${name}-${symbol}`}>
                         <StyledTableCell component="th" scope="row">
-                          {name}
+                          <Link className={classes.link} href={slug(name)}>{name}</Link>
                         </StyledTableCell>
                         <StyledTableCell align="center">
                           {symbol ? <Chip label={symbol} /> : null}

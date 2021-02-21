@@ -1,13 +1,18 @@
 import * as serviceWorker from './serviceWorker'
 
-import Home from './pages/Home'
+import { CompanyDataPage, Home } from './pages'
+
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Router } from "@reach/router"
 
 const AppToRender = () => {
   return (
     <React.StrictMode>
-      <Home />
+      <Router>
+        <Home path="/"/>
+        <CompanyDataPage path="/:companySlug"/>
+      </Router>
     </React.StrictMode>
   )
 }
