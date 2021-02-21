@@ -85,7 +85,7 @@ export default function CompanyDataPage({ location }) {
         </Box>
       </Box>
       <div>
-        {COMPANY_INFORMATION_FIELDS.map((field) => {
+        {COMPANY_INFORMATION_FIELDS.map((field, index) => {
           let currentData = data[field.dataKey]
           switch (field.dataKey) {
             case 'date':
@@ -108,7 +108,7 @@ export default function CompanyDataPage({ location }) {
           }
 
           return (
-            <div className={classes.row}>
+            <div key={index * 2} className={classes.row}>
               <Typography variant="h6" className={classes.fieldTitle}>
                 {field.title}
               </Typography>

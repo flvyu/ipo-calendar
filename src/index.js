@@ -3,20 +3,35 @@ import { MuiThemeProvider } from '@material-ui/core'
 
 import { DefaultThemeLight } from './theme/theme'
 import { CompanyDataPage, Home } from './pages'
+import { Router, createHistory, LocationProvider } from '@reach/router'
+import ReactGA from 'react-ga'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Router } from '@reach/router'
+
+ReactGA.initialize('UA-77721707-8', {
+  debug: process.env.NODE_ENV === 'development',
+  titleCase: false,
+})
+
+const history = createHistory(window)
 
 const AppToRender = () => {
+  history.listen((window) => {
+    ReactGA.pageview(window.location.pathname + window.location.search)
+    console.log('page=>', window.location.pathname)
+  })
+
   return (
     <React.StrictMode>
-      <MuiThemeProvider theme={DefaultThemeLight}>
-        <Router>
-          <Home path="/" />
-          <CompanyDataPage path="/:companySlug" />
-        </Router>
-      </MuiThemeProvider>
+      <LocationProvider>
+        <MuiThemeProvider theme={DefaultThemeLight}>
+          <Router>
+            <Home path="/" />
+            <CompanyDataPage path="/:companySlug" />
+          </Router>
+        </MuiThemeProvider>
+      </LocationProvider>
     </React.StrictMode>
   )
 }
