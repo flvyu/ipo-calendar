@@ -5,6 +5,7 @@ import { BoxedProgress } from '../components/CircularProgress'
 import { DateRange as Calendar } from '@material-ui/icons'
 import { DATE_SEPARATION } from '../constants/util_constants'
 import DateRangePicker from '../components/DateRangePicker'
+import { Helmet } from 'react-helmet'
 import IPOCalendarTable from '../components/IPOTable/IPOCalendarTable'
 import Layout from '../components/Layout'
 import NotificationBar from '../components/NotificationBar'
@@ -27,30 +28,40 @@ function Home() {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(false)
   const [ipoCalendarInformation, setIpoCalendarInformation] = useState({
-    ipoCalendar: []
+    ipoCalendar: [],
   })
 
   useEffect(() => {
     setLoading(true)
-    loadIpoCalendarInformation({ from: startDate.formattedDate, to: endDate.formattedDate })
-      .then(response => {
+    loadIpoCalendarInformation({
+      from: startDate.formattedDate,
+      to: endDate.formattedDate,
+    })
+      .then((response) => {
         setIpoCalendarInformation(response)
         setLoading(false)
       })
-      .catch(error => {
+      .catch((error) => {
         setError(error)
         setLoading(false)
       })
   }, [startDate.formattedDate, endDate.formattedDate])
+
+  const year = new Date().getFullYear()
 
   return (
     <Layout
       sidebar={<SocialMediaShare />}
       notificationBar={
         <NotificationBar>
-          <Notifications /> You can add this app to your home screen for quick access!
+          <Notifications /> You can add this app to your home screen for quick
+          access!
         </NotificationBar>
-      }>
+      }
+    >
+      <Helmet>
+        <title>{`Quickly find Upcoming and Recent IPOs | ${year} IPO Calendar`}</title>
+      </Helmet>
       <Banner
         title={
           <>
@@ -76,7 +87,7 @@ function Home() {
         ) : (
           <IPOCalendarTable data={ipoCalendarInformation.ipoCalendar} />
         )}
-        <ProductHuntBadge/>
+        <ProductHuntBadge />
       </div>
     </Layout>
   )
