@@ -1,5 +1,5 @@
+import { EMPTY_STRING } from '../constants/util_constants'
 import moment from 'moment'
-import { EMPTY_STRING } from './constants/util_constants'
 
 export function formatPrice(price) {
   if (!price) {
